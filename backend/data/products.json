@@ -1,0 +1,167 @@
+[
+  {
+    "Product ID": "SW001",
+    "Name": "HD Pro Webcam C920",
+    "Category": "Camera",
+    "Brand": "Logitech",
+    "Price": 79.99,
+    "Skill Level": "Beginner",
+    "Description": "Popular 1080p webcam for streamers and video creators.",
+    "Key Features": "1080p video, autofocus, stereo audio",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW002",
+    "Name": "Facecam MK.2",
+    "Category": "Camera",
+    "Brand": "Elgato",
+    "Price": 149.99,
+    "Skill Level": "Intermediate",
+    "Description": "High quality webcam designed specifically for streaming.",
+    "Key Features": "1080p60 video, low latency, DSLR-style control",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW003",
+    "Name": "Wave:3 USB Microphone",
+    "Category": "Audio",
+    "Brand": "Elgato",
+    "Price": 159.99,
+    "Skill Level": "Beginner",
+    "Description": "USB condenser microphone with built-in digital mixing.",
+    "Key Features": "Tap-to-mute, Wave Link software, cardioid pattern",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW004",
+    "Name": "Blue Yeti USB Microphone",
+    "Category": "Audio",
+    "Brand": "Logitech Blue",
+    "Price": 129.99,
+    "Skill Level": "Beginner",
+    "Description": "One of the most popular USB microphones for streamers.",
+    "Key Features": "Multiple pickup patterns, plug-and-play",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW005",
+    "Name": "Stream Deck MK.2",
+    "Category": "Controller",
+    "Brand": "Elgato",
+    "Price": 149.99,
+    "Skill Level": "Intermediate",
+    "Description": "Programmable control pad for switching scenes and triggering actions.",
+    "Key Features": "15 LCD keys, customizable actions",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW006",
+    "Name": "Stream Deck XL",
+    "Category": "Controller",
+    "Brand": "Elgato",
+    "Price": 249.99,
+    "Skill Level": "Advanced",
+    "Description": "Large control deck for professional stream management",
+    "Key Features": "32 customizable LCD keys",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW007",
+    "Name": "Key Light Air",
+    "Category": "Lighting",
+    "Brand": "Elgato",
+    "Price": 129.99,
+    "Skill Level": "Beginner",
+    "Description": "Compact LED panel designed for streaming setups.",
+    "Key Features": "Wi\u2011Fi control, adjustable brightness",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW008",
+    "Name": "Ring Light 18\"",
+    "Category": "Lighting",
+    "Brand": "Neewer",
+    "Price": 99.99,
+    "Skill Level": "Beginner",
+    "Description": "Bright ring light ideal for face lighting during streams.",
+    "Key Features": "Adjustable brightness, phone mount",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW009",
+    "Name": "Capture Card HD60 X",
+    "Category": "Capture Card",
+    "Brand": "Elgato",
+    "Price": 199.99,
+    "Skill Level": "Intermediate",
+    "Description": "Capture gameplay from consoles in high quality.",
+    "Key Features": "1080p60 HDR capture, USB-C",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW0010",
+    "Name": "Live Gamer Mini",
+    "Category": "Capture Card",
+    "Brand": "AVerMedia",
+    "Price": 129.99,
+    "Skill Level": "Intermediate",
+    "Description": "Compact capture card for beginner streamers.",
+    "Key Features": "Plug and play, low latency",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW0011",
+    "Name": "Boom Arm Mic Stand",
+    "Category": "Accessory",
+    "Brand": "Rode",
+    "Price": 99.99,
+    "Skill Level": "Beginner",
+    "Description": "Adjustable boom arm for professional microphone positioning.",
+    "Key Features": "Cable management, desk clamp",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW0012",
+    "Name": "Green Screen Collapsible",
+    "Category": "Accessory",
+    "Brand": "Elgato",
+    "Price": 159.99,
+    "Skill Level": "Intermediate",
+    "Description": "Portable green screen for background replacement.",
+    "Key Features": "Pop-up design, wrinkle resistant",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW0013",
+    "Name": "Gaming Headset Pro X",
+    "Category": "Audio",
+    "Brand": "Logitech",
+    "Price": 129.99,
+    "Skill Level": "Beginner",
+    "Description": "Comfortable headset with clear audio for gaming and streaming.",
+    "Key Features": "Surround sound, detachable mic",
+    "Availability": "In Stock"
+  },
+  {
+    "Product ID": "SW0014",
+    "Name": "4K Streaming Camera",
+    "Category": "Camera",
+    "Brand": "Sony",
+    "Price": 899.99,
+    "Skill Level": "Advanced",
+    "Description": "Professional mirrorless camera used by high-end streamers.",
+    "Key Features": "4K video, interchangeable lenses",
+    "Availability": "Limited stock"
+  },
+  {
+    "Product ID": "SW0015",
+    "Name": "Dual Monito",
+    "Category": "Accessory",
+    "Brand": "VIVO",
+    "Price": 69.99,
+    "Skill Level": "Beginner",
+    "Description": "Mount two monitors for improved streaming workflow.",
+    "Key Features": "Adjustable arms, cable management",
+    "Availability": "In Stock"
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "orderId": "ORD-1774486894241",
+    "customer": {
+      "name": "Your Name",
+      "email": "you@email.com",
+      "address": "123 Street"
+    },
+    "items": [
+      {
+        "productId": "SW001",
+        "name": "HD Pro Webcam C920",
+        "price": 79.99,
+        "quantity": 1
+      }
+    ],
+    "total": 79.99,
+    "date": "2026-03-26T01:01:34.241Z",
+    "status": "confirmed"
+  }
+]
