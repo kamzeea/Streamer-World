@@ -475,7 +475,7 @@ function CheckoutPage({ cart, onBack, onOrderPlaced }) {
           </div>
           <div className="form-group">
             <label>Email Address</label>
-            <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="john@example.com" required />
+            <input name="email" type="email" value={form.email} onChange={handleChange} required />
           </div>
           <div className="form-group">
             <label>Street Address</label>
