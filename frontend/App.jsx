@@ -479,21 +479,21 @@ function CheckoutPage({ cart, onBack, onOrderPlaced }) {
           </div>
           <div className="form-group">
             <label>Street Address</label>
-            <input name="street" value={form.street} onChange={handleChange} placeholder="123 Main St" required />
+            <input name="street" value={form.street} onChange={handleChange} required />
           </div>
           <div className="form-row">
             <div className="form-group">
               <label>City</label>
-              <input name="city" value={form.city} onChange={handleChange} placeholder="New York" required />
+              <input name="city" value={form.city} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <label>State</label>
-              <input name="state" value={form.state} onChange={handleChange} placeholder="NY" required />
+              <input name="state" value={form.state} onChange={handleChange} required />
             </div>
           </div>
           <div className="form-group">
             <label>ZIP Code</label>
-            <input name="zip" value={form.zip} onChange={handleChange} placeholder="10001" required />
+            <input name="zip" value={form.zip} onChange={handleChange} required />
           </div>
           <button className="place-order-btn" type="submit" disabled={!isValid || loading}>
             {loading ? "Placing Order…" : `Place Order · ${fmt(total)}`}
