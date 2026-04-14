@@ -412,7 +412,10 @@ function CartPage({ cart, onUpdateQty, onRemove, onClear, onCheckout, onShop }) 
 // ── CheckoutPage ──────────────────────────────────────────────────────────────
 
 function CheckoutPage({ cart, onBack, onOrderPlaced }) {
-  const [form, setForm] = useState({ name: "", email: "", address: "" });
+  const [form, setForm] = useState({
+    firstName: "", lastName: "", email: "",
+    street: "", city: "", state: "", zip: "",
+  });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -426,10 +429,19 @@ function CheckoutPage({ cart, onBack, onOrderPlaced }) {
     setLoading(true);
     setError(null);
     try {
+      const payload = {
+        firstName: form.firstName.trim(),
+        lastName: form.lastName.trim(),
+        email: form.email.trim(),
+        street: form.street.trim(),
+        city: form.city.trim(),
+        state: form.state.trim(),
+        zip: form.zip.trim(),
+      };
       const res = await fetch(`${API}/checkout`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Checkout failed");
@@ -440,7 +452,7 @@ function CheckoutPage({ cart, onBack, onOrderPlaced }) {
     }
   }
 
-  const isValid = form.name.trim() && form.email.trim() && form.address.trim();
+  const isValid = Object.values(form).every(v => v.trim() !== "");
 
   return (
     <div>
@@ -451,17 +463,37 @@ function CheckoutPage({ cart, onBack, onOrderPlaced }) {
         <form className="form-card" onSubmit={handleSubmit}>
           <h2>Shipping Information</h2>
           {error && <div className="error-msg">{error}</div>}
-          <div className="form-group">
-            <label>Full Name</label>
-            <input name="name" value={form.name} onChange={handleChange} placeholder="John Doe" required />
+          <div className="form-row">
+            <div className="form-group">
+              <label>First Name</label>
+              <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="John" required />
+            </div>
+            <div className="form-group">
+              <label>Last Name</label>
+              <input name="lastName" value={form.lastName} onChange={handleChange} placeholder="Doe" required />
+            </div>
           </div>
           <div className="form-group">
             <label>Email Address</label>
             <input name="email" type="email" value={form.email} onChange={handleChange} placeholder="john@example.com" required />
           </div>
           <div className="form-group">
-            <label>Shipping Address</label>
-            <textarea name="address" value={form.address} onChange={handleChange} placeholder="123 Main St, City, State, ZIP" required />
+            <label>Street Address</label>
+            <input name="street" value={form.street} onChange={handleChange} placeholder="123 Main St" required />
+          </div>
+          <div className="form-row">
+            <div className="form-group">
+              <label>City</label>
+              <input name="city" value={form.city} onChange={handleChange} placeholder="New York" required />
+            </div>
+            <div className="form-group">
+              <label>State</label>
+              <input name="state" value={form.state} onChange={handleChange} placeholder="NY" required />
+            </div>
+          </div>
+          <div className="form-group">
+            <label>ZIP Code</label>
+            <input name="zip" value={form.zip} onChange={handleChange} placeholder="10001" required />
           </div>
           <button className="place-order-btn" type="submit" disabled={!isValid || loading}>
             {loading ? "Placing Order…" : `Place Order · ${fmt(total)}`}
@@ -497,14 +529,15 @@ function OrderConfirmed({ order, onContinue }) {
     <div className="order-confirmed">
       <div className="check-icon">✓</div>
       <h1>Order Confirmed!</h1>
-      <p>Thanks {order.customer.name}! We've received your order and will ship it soon.</p>
+      <p>Thanks {order.customer.firstName}! We've received your order and will ship it soon.</p>
 
       <div className="order-details-card">
         <h3>Order Details</h3>
         <div className="order-meta">
           <div><span>Order ID: </span><strong>{order.orderId}</strong></div>
+          <div><span>Name: </span><strong>{order.customer.firstName} {order.customer.lastName}</strong></div>
           <div><span>Email: </span><strong>{order.customer.email}</strong></div>
-          <div><span>Ship to: </span><strong>{order.customer.address}</strong></div>
+          <div><span>Ship to: </span><strong>{order.customer.street}, {order.customer.city}, {order.customer.state} {order.customer.zip}</strong></div>
         </div>
         <div className="order-items-list">
           {order.items.map(item => (

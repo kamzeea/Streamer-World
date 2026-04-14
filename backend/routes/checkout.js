@@ -24,12 +24,12 @@ function clearCart() {
 
 // POST /api/checkout
 // Places an order using the current cart contents
-// Body: { "name": "John Doe", "email": "john@example.com", "address": "123 Main St" }
+// Body: { firstName, lastName, email, street, city, state, zip }
 router.post("/", (req, res) => {
-  const { name, email, address } = req.body;
+  const { firstName, lastName, email, street, city, state, zip } = req.body;
 
-  if (!name || !email || !address) {
-    return res.status(400).json({ error: "name, email, and address are required" });
+  if (!firstName || !lastName || !email || !street || !city || !state || !zip) {
+    return res.status(400).json({ error: "firstName, lastName, email, street, city, state, and zip are all required" });
   }
 
   const cart = getCart();
@@ -42,7 +42,7 @@ router.post("/", (req, res) => {
 
   const order = {
     orderId: "ORD-" + Date.now(),
-    customer: { name, email, address },
+    customer: { firstName, lastName, email, street, city, state, zip },
     items: cart,
     total: parseFloat(total.toFixed(2)),
     date: new Date().toISOString(),
