@@ -466,11 +466,11 @@ function CheckoutPage({ cart, onBack, onOrderPlaced }) {
           <div className="form-row">
             <div className="form-group">
               <label>First Name</label>
-              <input name="firstName" value={form.firstName} onChange={handleChange} placeholder="John" required />
+              <input name="firstName" value={form.firstName} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <label>Last Name</label>
-              <input name="lastName" value={form.lastName} onChange={handleChange} placeholder="Doe" required />
+              <input name="lastName" value={form.lastName} onChange={handleChange} required />
             </div>
           </div>
           <div className="form-group">
